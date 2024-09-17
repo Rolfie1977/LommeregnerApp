@@ -1,0 +1,36 @@
+$button-bg-color: #f0f0f0;
+$button-active-color: #ddd;
+$display-bg-color: #222;
+$display-text-color: #fff;
+
+.calculator {
+  width: 300px;
+  margin: 0 auto;
+
+  .display {
+    background-color: $display-bg-color;
+    color: $display-text-color;
+    text-align: right;
+    padding: 20px;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    button {
+      padding: 20px;
+      font-size: 1.5em;
+      cursor: pointer;
+      background-color: $button-bg-color;
+      border: none;
+
+      &:active {
+        background-color: $button-active-color;
+      }
+    }
+  }
+}
